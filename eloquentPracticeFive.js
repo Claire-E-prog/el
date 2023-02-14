@@ -1,3 +1,45 @@
+//Higher order functions
+//Arrow functions - decompose normal functions to arrow functions
+
+// Traditional anonymous function
+(function (a) {
+    return a + 100;
+});
+
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+    return a + 100;
+};
+
+// 2. Remove the body braces and word "return" — the return is implied.
+(a) => a + 100;
+
+// 3. Remove the parameter parentheses
+a => a + 100;
+
+/*
+The parentheses can only be omitted if the function has a single simple parameter. 
+If it has multiple parameters, no parameters, or default, destructured, or rest parameters, 
+the parentheses around the parameter list are required.
+**/
+// Traditional anonymous function
+(function (a, b) {
+    return a + b + 100;
+  });
+  
+  // Arrow function
+  (a, b) => a + b + 100;
+  
+  const a = 4;
+  const b = 2;
+  
+  // Traditional anonymous function (no parameters)
+  (function () {
+    return a + b + 100;
+  });
+  
+  // Arrow function (no arguments)
+  () => a + b + 100;
 /**
  * Write a function countBs that takes a string as its only 
  * argument and returns a number that indicates how many uppercase “B” characters there are in the string.
